@@ -1,0 +1,62 @@
+.service-card {
+  background: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-slow);
+}
+
+.service-card:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+}
+
+.service-icon {
+  background: var(--color-primary);
+  width: 4rem;
+  height: 4rem;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.service-icon svg {
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-white);
+}
+
+.service-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.service-description {
+  color: var(--color-navy);
+  margin-bottom: var(--spacing-md);
+  line-height: var(--line-height-relaxed);
+  font-size: var(--font-size-base);
+}
+
+.service-link {
+  color: var(--color-golden);
+  font-weight: var(--font-weight-medium);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.service-link:hover {
+  color: var(--color-golden-dark);
+}
+
+.service-link .icon {
+  width: 1.125rem;
+  height: 1.125rem;
+}

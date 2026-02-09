@@ -1,0 +1,127 @@
+<div class="home-page">
+  <!-- Hero Section -->
+  <app-hero-section></app-hero-section>
+
+  <!-- Trusted By Strip -->
+  <section class="trusted-by">
+    <div class="container">
+      <div class="trusted-content">
+        <span class="trusted-label">Trusted by employers in:</span>
+        <div class="countries">
+          <div class="country-item">
+            <span class="flag">🇸🇦</span>
+            <span class="country-name">Saudi Arabia</span>
+          </div>
+          <div class="country-item">
+            <span class="flag">🇦🇪</span>
+            <span class="country-name">UAE</span>
+          </div>
+          <div class="country-item">
+            <span class="flag">🇰🇪</span>
+            <span class="country-name">Kenya</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-description">
+          We specialize in recruiting and deploying exceptional talent across various sectors
+        </p>
+      </div>
+      <div class="services-grid">
+        @for (service of services; track service.title) {
+          <app-service-card
+            [icon]="service.icon"
+            [title]="service.title"
+            [description]="service.description"
+            [link]="service.link"
+          ></app-service-card>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-choose-section">
+    <div class="pattern-overlay"></div>
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title light">Why Choose Mowadi Overseas</h2>
+        <p class="section-description light">
+          We are committed to excellence in recruitment and workforce deployment
+        </p>
+      </div>
+      <div class="stats-grid">
+        @for (stat of stats; track stat.title) {
+          <app-stat-card
+            [icon]="stat.icon"
+            [title]="stat.title"
+            [description]="stat.description"
+          ></app-stat-card>
+        }
+        <app-stat-card
+          icon="trending"
+          [title]="placementCount().toLocaleString() + '+ Placements'"
+          description="Successfully deployed across the Middle East"
+        ></app-stat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-description">
+          Our streamlined 4-step process ensures quality recruitment and deployment
+        </p>
+      </div>
+      <div class="process-steps">
+        @for (step of processSteps; track step.number; let last = $last) {
+          <div class="step-item">
+            <div class="step-circle">{{ step.number }}</div>
+            @if (!last) {
+              <div class="step-line"></div>
+            }
+            <h3 class="step-title">{{ step.title }}</h3>
+            <p class="step-description">{{ step.description }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="container-narrow">
+      <div class="section-header">
+        <h2 class="section-title">What Our Clients Say</h2>
+      </div>
+      <div class="testimonial-wrapper">
+        <app-testimonial-card
+          [testimonial]="testimonials[currentTestimonial()]"
+        ></app-testimonial-card>
+        <div class="carousel-indicators">
+          @for (testimonial of testimonials; track $index) {
+            <button
+              class="indicator"
+              [class.active]="$index === currentTestimonial()"
+              (click)="selectTestimonial($index)"
+              [attr.aria-label]="'Go to testimonial ' + ($index + 1)"
+            ></button>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <app-cta-section></app-cta-section>
+</div>

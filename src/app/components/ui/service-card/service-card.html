@@ -1,0 +1,34 @@
+<div class="service-card">
+  <div class="service-icon">
+    @switch (icon()) {
+      @case ('users') {
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+      }
+      @case ('sparkles') {
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 3l1.545 5.654L19 9.273l-4.364 3.727L16.182 21 12 17.455 7.818 21l1.546-7.273L5 9.273l5.455-.619z"></path>
+        </svg>
+      }
+      @case ('award') {
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="8" r="7"></circle>
+          <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+        </svg>
+      }
+    }
+  </div>
+  <h3 class="service-title">{{ title() }}</h3>
+  <p class="service-description">{{ description() }}</p>
+  <a [routerLink]="link()" class="service-link">
+    Learn More
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="5" y1="12" x2="19" y2="12"></line>
+      <polyline points="12 5 19 12 12 19"></polyline>
+    </svg>
+  </a>
+</div>

@@ -1,0 +1,36 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <a href="/" class="navbar-logo">
+      <div class="logo-content">
+        <span class="logo-text">Mowadi Overseas</span>
+        <span class="logo-tagline">Connecting Global Talent</span>
+      </div>
+    </a>
+
+    <button class="navbar-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
+      <span class="toggle-icon"></span>
+      <span class="toggle-icon"></span>
+      <span class="toggle-icon"></span>
+    </button>
+
+    <div class="navbar-right">
+      <ul class="navbar-menu" [class.active]="isMenuOpen">
+        @for (item of menuItems; track item.route) {
+          <li class="navbar-item">
+            <a
+              [routerLink]="item.route"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact: item.route === '/'}"
+              class="navbar-link"
+              (click)="isMenuOpen = false">
+              {{ item.label }}
+            </a>
+          </li>
+        }
+      </ul>
+      <app-button variant="primary" size="medium">
+        <a routerLink="/contact" class="btn-large">Contact Us</a>
+      </app-button>
+    </div>
+  </div>
+</nav>

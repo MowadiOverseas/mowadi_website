@@ -1,0 +1,99 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-semibold);
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-slow) ease;
+  font-family: inherit;
+  text-decoration: none;
+  gap: var(--spacing-sm);
+}
+
+.btn a {
+  color: inherit !important;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Sizes */
+.btn-small {
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-sm);
+}
+
+.btn-medium {
+  padding: 0.75rem var(--spacing-lg);
+  font-size: var(--font-size-md);
+}
+
+.btn-large {
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: var(--font-size-lg);
+}
+
+/* Variants */
+.btn-primary {
+  background: var(--color-golden);
+  color: var(--color-white) !important;
+}
+
+.btn-primary a,
+.btn-primary a:visited,
+.btn-primary a:hover,
+.btn-primary a:active {
+  color: var(--color-white) !important;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--color-golden-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-button);
+}
+
+.btn-secondary {
+  background: var(--color-gray-600);
+  color: var(--color-white);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--color-gray-700);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+}
+
+.btn-outline:hover:not(:disabled) {
+  background: var(--color-white);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.btn-danger {
+  background: var(--color-error);
+  color: var(--color-white);
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(0);
+}

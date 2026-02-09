@@ -1,0 +1,27 @@
+.stat-card {
+  text-align: center;
+  color: var(--color-white);
+}
+
+.stat-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.stat-icon svg {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-golden);
+}
+
+.stat-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-sm);
+}
+
+.stat-description {
+  opacity: 0.9;
+  font-size: var(--font-size-base);
+}
