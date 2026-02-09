@@ -1,0 +1,100 @@
+<div class="about-page">
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">About Mowadi Overseas</h1>
+      <p class="hero-subtitle">Your trusted partner in global recruitment excellence</p>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section class="our-story">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-content">
+          <h2 class="section-title">Our Story</h2>
+          <div class="story-text">
+            <p>Founded in 2010, Mowadi Overseas Ltd. has grown to become one of Kenya's most trusted recruitment agencies, specializing in deploying skilled domestic helpers, cleaning staff, and professional workers to the Middle East.</p>
+            <p>Based in Nairobi, we have built strong partnerships with employers across Saudi Arabia, UAE, and other Gulf countries, successfully placing over 5,000 workers in rewarding positions abroad.</p>
+            <p>Our commitment to integrity, professionalism, and reliability has earned us the trust of both employers seeking quality staff and workers seeking legitimate opportunities for better lives.</p>
+          </div>
+        </div>
+        <div class="story-image">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop" alt="Our team">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision Section -->
+  <section class="mission-vision">
+    <div class="container">
+      <div class="mv-grid">
+        <app-mission-vision-card
+          icon="target"
+          title="Our Mission"
+          description="To connect skilled Kenyan workers with reputable employers in the Middle East, providing life-changing opportunities while maintaining the highest standards of ethical recruitment and worker welfare.">
+        </app-mission-vision-card>
+        
+        <app-mission-vision-card
+          icon="eye"
+          title="Our Vision"
+          description="To be the leading recruitment agency in East Africa, recognized for excellence in workforce deployment, exceptional service delivery, and positive impact on the lives of workers and their families.">
+        </app-mission-vision-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values Section -->
+  <section class="core-values">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Our Core Values</h2>
+        <p class="section-description">The principles that guide everything we do</p>
+      </div>
+      <div class="values-grid">
+        @for (value of coreValues; track value.title) {
+          <app-value-card
+            [icon]="value.icon"
+            [title]="value.title"
+            [description]="value.description">
+          </app-value-card>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Section -->
+  <section class="statistics">
+    <div class="container">
+      <div class="stats-grid">
+        @for (stat of stats; track stat.label) {
+          <div class="stat-item">
+            <div class="stat-value">{{ stat.value }}</div>
+            <div class="stat-label">{{ stat.label }}</div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Meet Our Team</h2>
+        <p class="section-description">Experienced professionals dedicated to your success</p>
+      </div>
+      <div class="team-grid">
+        @for (member of teamMembers; track member.name) {
+          <app-team-member
+            [name]="member.name"
+            [role]="member.role"
+            [image]="member.image">
+          </app-team-member>
+        }
+      </div>
+    </div>
+  </section>
+</div>

@@ -28,6 +28,12 @@
   flex-direction: column;
 }
 
+.footer-logo {
+  height: 60px;
+  width: auto;
+  margin-bottom: var(--spacing-md);
+}
+
 .footer-title {
   font-size: 1.35rem;
   font-weight: var(--font-weight-bold);

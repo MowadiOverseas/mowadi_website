@@ -18,6 +18,15 @@
 .navbar-logo {
   text-decoration: none;
   color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.logo-image {
+  height: 50px;
+  width: auto;
+  display: block;
 }
 
 .logo-content {

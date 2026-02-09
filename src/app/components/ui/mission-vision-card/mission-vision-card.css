@@ -1,0 +1,36 @@
+.mv-card {
+  background: var(--color-white);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.mv-icon {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: var(--spacing-lg);
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mv-icon svg {
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-white);
+}
+
+.mv-title {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  font-weight: var(--font-weight-bold);
+}
+
+.mv-description {
+  color: var(--color-navy);
+  line-height: var(--line-height-relaxed);
+  font-size: var(--font-size-base);
+}
