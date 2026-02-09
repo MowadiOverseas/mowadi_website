@@ -23,7 +23,7 @@
 }
 
 .mv-title {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-2xl);
   color: var(--color-primary);
   margin-bottom: var(--spacing-md);
   font-weight: var(--font-weight-bold);
@@ -32,5 +32,5 @@
 .mv-description {
   color: var(--color-navy);
   line-height: var(--line-height-relaxed);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-md);
 }
