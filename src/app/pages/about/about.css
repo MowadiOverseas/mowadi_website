@@ -151,19 +151,19 @@
   .story-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .mv-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .values-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
   }
