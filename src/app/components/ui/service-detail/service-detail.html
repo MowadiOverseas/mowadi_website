@@ -1,0 +1,47 @@
+<section class="service-detail" [class.reverse]="imagePosition() === 'left'">
+  <div class="container">
+    <div class="service-grid">
+      <div class="service-content">
+        <div class="service-icon">
+          @switch (icon()) {
+            @case ('users') {
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            }
+            @case ('sparkles') {
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 7l-5 5-5-5M7 17l5-5 5 5"></path>
+              </svg>
+            }
+            @case ('award') {
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+            }
+          }
+        </div>
+        <h2 class="service-title">{{ title() }}</h2>
+        <p class="service-description">{{ description() }}</p>
+        <ul class="service-features">
+          @for (feature of features(); track feature) {
+            <li class="feature-item">
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              {{ feature }}
+            </li>
+          }
+        </ul>
+      </div>
+      <div class="service-image">
+        <img [src]="image()" [alt]="title()">
+      </div>
+    </div>
+  </div>
+</section>

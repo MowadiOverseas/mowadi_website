@@ -1,0 +1,54 @@
+.process-step {
+  background: var(--color-soft-blue);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-xl);
+  text-align: left;
+  transition: all var(--transition-slow);
+  cursor: pointer;
+}
+
+.process-step:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  background: var(--color-primary);
+}
+
+.process-step:hover .step-title {
+  color: var(--color-white);
+}
+
+.process-step:hover .step-description {
+  color: var(--color-white);
+}
+
+.process-step:hover .step-number {
+  background: var(--color-golden);
+  color: var(--color-navy);
+}
+
+.step-number {
+  width: 3rem;
+  height: 3rem;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-md);
+}
+
+.step-title {
+  font-size: var(--font-size-lg);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.step-description {
+  color: var(--color-navy);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+}

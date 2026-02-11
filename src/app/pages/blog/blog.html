@@ -1,0 +1,48 @@
+<div class="blog-page">
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Our Blog</h1>
+      <p class="hero-subtitle">Insights, tips, and success stories from the world of overseas recruitment</p>
+    </div>
+  </section>
+
+  <!-- Category Filter -->
+  <section class="category-filter">
+    <div class="filter-container">
+      @for (category of categories; track category) {
+        <button
+          class="filter-btn"
+          [class.active]="selectedCategory() === category"
+          (click)="selectCategory(category)">
+          {{ category }}
+        </button>
+      }
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
+  <section class="blog-posts">
+    <div class="posts-container">
+      <div class="posts-grid">
+        @for (post of filteredPosts; track post.id) {
+          <app-blog-card
+            [title]="post.title"
+            [excerpt]="post.excerpt"
+            [category]="post.category"
+            [author]="post.author"
+            [date]="post.date"
+            [image]="post.image">
+          </app-blog-card>
+        }
+      </div>
+
+      @if (filteredPosts.length === 0) {
+        <div class="no-posts">
+          <p>No articles found in this category.</p>
+        </div>
+      }
+    </div>
+  </section>
+</div>

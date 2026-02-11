@@ -1,0 +1,62 @@
+<div class="services-page">
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Our Services</h1>
+      <p class="hero-subtitle">Comprehensive recruitment solutions tailored to your workforce needs</p>
+    </div>
+  </section>
+
+  <!-- Services Detail Sections -->
+  @for (service of services; track service.title; let i = $index) {
+    <app-service-detail
+      [icon]="service.icon"
+      [title]="service.title"
+      [description]="service.description"
+      [features]="service.features"
+      [image]="service.image"
+      [imagePosition]="service.imagePosition"
+      [class.bg-blue]="i === 1">
+    </app-service-detail>
+  }
+
+  <!-- Recruitment Process Section -->
+  <section class="process-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Our Recruitment Process</h2>
+        <p class="section-description">A comprehensive 8-step process ensuring quality and compliance</p>
+      </div>
+      <div class="process-grid">
+        @for (step of processSteps; track step.number) {
+          <app-process-step
+            [number]="step.number"
+            [title]="step.title"
+            [description]="step.description">
+          </app-process-step>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section class="benefits-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Why Choose Our Services</h2>
+      </div>
+      <div class="benefits-grid">
+        @for (benefit of benefits; track benefit.title) {
+          <app-benefit-card
+            [title]="benefit.title"
+            [description]="benefit.description">
+          </app-benefit-card>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <app-cta-section></app-cta-section>
+</div>

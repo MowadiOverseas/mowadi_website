@@ -14,8 +14,7 @@ export class Footer {
     { label: 'Home', route: '/' },
     { label: 'About Us', route: '/about' },
     { label: 'Services', route: '/services' },
-    { label: 'Destinations', route: '/destinations' }
-  ];
+    { label: 'Blog', route: '/blog' },];
 
   services = [
     { label: 'Domestic Helpers', route: '/services/domestic-helpers' },
