@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BlogCard } from '../../components/ui/blog-card/blog-card';
 
@@ -118,12 +118,12 @@ export class Blog {
     }
   ];
 
-  get filteredPosts() {
+  filteredPosts = computed(() => {
     if (this.selectedCategory() === 'All Articles') {
       return this.allPosts;
     }
     return this.allPosts.filter(post => post.category === this.selectedCategory());
-  }
+  });
 
   selectCategory(category: Category) {
     this.selectedCategory.set(category);

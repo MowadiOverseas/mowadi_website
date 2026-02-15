@@ -1,86 +1,111 @@
 /* You can add global styles to this file, and also import other style files */
 
+/* ==================== Font Import ==================== */
+@font-face {
+  font-family: 'Bricle';
+  src: url('/fonts/bricle-font/bricle-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bricle';
+  src: url('/fonts/bricle-font/bricle-italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* ==================== Design System ==================== */
 /* CSS Custom Properties for Mowadi Overseas */
 
 :root {
-  /* Brand Colors (STRICT) */
-  --color-primary: #3693E2;           /* Primary Blue - Nav bar, buttons, headings */
-  --color-primary-dark: #2a7ac7;      /* Darker shade for hover states */
-  --color-primary-light: #5aaae8;     /* Lighter shade for subtle effects */
+  /* Brand Colors - African Warmth & Vibrancy */
+  --color-primary: #e2835f;           /* Warm Coral - Primary brand color, warmth and approachability */
+  --color-primary-dark: #c06a4a;      /* Deeper coral for hover states */
+  --color-primary-light: #f0b08a;     /* Lighter coral for subtle effects */
 
-  --color-soft-blue: #ACCFF1;         /* Soft Blue - Section backgrounds, cards, accents */
-  --color-golden: #F3C145;            /* Golden Yellow - CTAs, highlights, badges, icons */
-  --color-golden-dark: #d9a92e;       /* Darker golden for hover states */
-  --color-warm-red: #C55152;          /* Warm Red - Alerts, hover accents, secondary actions */
+  --color-secondary: #3793e2;         /* Sky Blue - Secondary actions, trust and professionalism */
+  --color-secondary-dark: #2a7ac7;    /* Deeper blue for hover states */
+  --color-secondary-light: #5aaae8;   /* Lighter blue for accents */
+
+  --color-golden: #f3c041;            /* Golden Sun - CTAs, highlights, success, energy */
+  --color-golden-dark: #d9a92e;       /* Deeper gold for hover states */
+  --color-golden-light: #f5cd65;      /* Lighter gold for subtle accents */
+
+  --color-warm-red: #c55051;          /* Warm Red - Alerts, emphasis, passion */
+  --color-warm-red-dark: #a43e3f;     /* Deeper red for hover states */
 
   /* Base Colors */
-  --color-white: #FCFFFF;             /* White - Page backgrounds, card surfaces */
-  --color-black: #000000;
-  --color-navy: #1A2B4A;              /* Dark Navy - Primary text color */
-  --color-dark: #2c3e50;              /* Footer background */
+  --color-white: #fdffff;             /* Pure White - Clean backgrounds */
+  --color-black: #1b3039;             /* Deep Ocean - Text, footer, dark sections */
+  --color-navy: #1b3039;              /* Deep Ocean - Primary text color */
+  --color-dark: #1b3039;              /* Dark sections and footer */
 
   /* Legacy accent mappings (for compatibility) */
-  --color-accent: #F3C145;
+  --color-accent: #f3c041;
   --color-accent-dark: #d9a92e;
   --color-accent-light: #f5cd65;
+  --color-soft-blue: #f4d3b8;         /* Warm Peach - Soft, earthy background tone */
 
-  /* Gray Scale */
-  --color-gray-50: #f8fafc;
-  --color-gray-100: #f1f5f9;
-  --color-gray-200: #e2e8f0;
-  --color-gray-300: #cbd5e1;
-  --color-gray-400: #94a3b8;
-  --color-gray-500: #64748b;
-  --color-gray-600: #475569;
-  --color-gray-700: #334155;
-  --color-gray-800: #1e293b;
-  --color-gray-900: #0f172a;
+  /* Gray Scale - Derived from base colors */
+  --color-gray-50: #fafbfc;
+  --color-gray-100: #f5f7f8;
+  --color-gray-200: #e8ebec;
+  --color-gray-300: #d1d7da;
+  --color-gray-400: #a8b2b7;
+  --color-gray-500: #7d8a91;
+  --color-gray-600: #5a6a72;
+  --color-gray-700: #3d4f57;
+  --color-gray-800: #2a3c44;
+  --color-gray-900: #1b3039;
 
   /* Text Colors */
-  --color-text-primary: #1A2B4A;      /* Dark navy for readability */
-  --color-text-secondary: #475569;
-  --color-text-tertiary: #64748b;
-  --color-text-light: #cbd5e1;
-  --color-text-muted: #94a3b8;
+  --color-text-primary: #1b3039;      /* Deep ocean for readability */
+  --color-text-secondary: #3d4f57;    /* Softer dark for secondary text */
+  --color-text-tertiary: #5a6a72;     /* Muted for tertiary text */
+  --color-text-light: #d1d7da;        /* Light text on dark backgrounds */
+  --color-text-muted: #a8b2b7;        /* Very subtle text */
 
   /* Semantic Colors */
-  --color-success: #10b981;
-  --color-warning: #F3C145;           /* Using golden yellow */
-  --color-error: #C55152;             /* Using warm red */
-  --color-info: #3693E2;              /* Using primary blue */
+  --color-success: #4caf50;
+  --color-warning: #f3c041;           /* Golden yellow */
+  --color-error: #c55051;             /* Warm red */
+  --color-info: #3793e2;              /* Sky blue */
 
   /* Background Colors */
-  --bg-primary: #FCFFFF;              /* White */
-  --bg-secondary: #ACCFF1;            /* Soft blue */
-  --bg-card: #FCFFFF;                 /* White for cards */
-  --bg-dark: #2c3e50;
-  --bg-overlay: rgba(26, 43, 74, 0.5);
+  --bg-primary: #fdffff;              /* Pure white */
+  --bg-secondary: rgba(226, 131, 95, 0.08);  /* Subtle coral tint */
+  --bg-tertiary: rgba(55, 147, 226, 0.08);   /* Subtle blue tint */
+  --bg-card: #fdffff;                 /* White for cards */
+  --bg-dark: #1b3039;                 /* Deep ocean */
+  --bg-overlay: rgba(27, 48, 57, 0.75); /* Dark overlay */
 
   /* Typography */
-  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  --font-family-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --font-family-base: 'Bricle', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --font-family-heading: 'Bricle', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   --font-family-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
 
   /* Font Sizes */
-  --font-size-xs: 0.75rem;      /* 12px */
-  --font-size-sm: 0.875rem;     /* 14px */
-  --font-size-base: 0.95rem;    /* 15.2px */
-  --font-size-md: 1rem;         /* 16px */
-  --font-size-lg: 1.125rem;     /* 18px */
-  --font-size-xl: 1.25rem;      /* 20px */
-  --font-size-2xl: 1.5rem;      /* 24px */
-  --font-size-3xl: 1.875rem;    /* 30px */
-  --font-size-4xl: 2.25rem;     /* 36px */
-  --font-size-5xl: 3rem;        /* 48px */
+  --font-size-xs: 0.5rem;     /* 8px */
+  --font-size-sm: 0.75rem;      /* 12px */
+  --font-size-base: 0.875rem;     /* 14px */
+  --font-size-md: 0.95rem;    /* 15.2px */
+  --font-size-lg: 1rem;         /* 16px */
+  --font-size-xl: 1.125rem;     /* 18px */
+  --font-size-2xl: 1.25rem;      /* 20px */
+  --font-size-3xl: 1.5rem;      /* 24px */
+  --font-size-4xl: 1.875rem;    /* 30px */
+  --font-size-5xl: 2.25rem;     /* 36px */
+  --font-size-6xl: 3rem;        /* 48px */
 
   /* Font Weights */
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
+  --font-weight-light: 100;
+  --font-weight-normal: 200;
+  --font-weight-medium: 300;
+  --font-weight-semibold: 400;
+  --font-weight-bold: 500;
 
   /* Line Heights */
   --line-height-tight: 1.25;
@@ -162,7 +187,7 @@ h5 { font-size: var(--font-size-lg); }
 h6 { font-size: var(--font-size-md); }
 
 a {
-  color: var(--color-primary);
+  color: var(--color-black);
   text-decoration: none;
   transition: color var(--transition-base);
 }

@@ -59,7 +59,7 @@
 
 .section-title {
   font-size: var(--font-size-3xl);
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   margin-bottom: var(--spacing-md);
   font-weight: var(--font-weight-bold);
 }

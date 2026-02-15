@@ -122,16 +122,32 @@ export class Services {
 
   benefits: BenefitData[] = [
     {
-      title: 'Specialized Training',
-      description: 'Advanced hygiene protocols and modern cleaning methods.'
+      title: 'Clear Communication at Every Step',
+      description: 'We prioritize open and transparent communication, providing regular updates throughout the recruitment process, ensuring clients and candidates are always well informed.'
     },
     {
-      title: 'Reliable Workforce',
-      description: 'Vetted and disciplined cleaners ready to serve.'
+      title: 'High-Quality Talent Acquisition',
+      description: 'Through rigorous screening and assessment, we ensure every candidate not only meets technical qualifications but also aligns with the client\'s culture and values.'
     },
     {
-      title: 'Productivity Boost',
-      description: 'A clean environment improves family comfort and workplace efficiency.'
+      title: 'Expertise Across Industries',
+      description: 'A wealth of knowledge across multiple sectors, from healthcare to engineering.'
+    },
+    {
+      title: 'Global Reach, Local Insight',
+      description: 'We combine international networks with local expertise to match talent to the right roles.'
+    },
+    {
+      title: 'Integrity and Ethics',
+      description: 'We maintain high ethical standards, ensuring transparency and professionalism in every interaction.'
+    },
+    {
+      title: 'Time-Efficient Service Delivery',
+      description: 'We understand the urgency of staffing needs. Our streamlined recruitment processes ensure timely candidate sourcing and placement, minimizing business downtime.'
+    },
+    {
+      title: 'Flexible, Client Centric Solutions',
+      description: 'Customized recruitment processes that align with business goals and timelines.'
     }
   ];
 }

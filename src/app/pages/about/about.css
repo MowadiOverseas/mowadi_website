@@ -60,7 +60,18 @@
   color: var(--color-navy);
   line-height: var(--line-height-relaxed);
   margin-bottom: var(--spacing-md);
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-lg);
+}
+
+.story-text .highlight {
+  color: var(--color-golden-dark);
+  font-weight: var(--font-weight-semibold);
+}
+
+.story-text .highlight-accent {
+  color: var(--color-golden-dark);
+  font-weight: var(--font-weight-bold);
+  font-size: 1.1em;
 }
 
 .story-image img {
@@ -102,8 +113,10 @@
 
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-xl);
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 /* Statistics Section */
@@ -148,6 +161,12 @@
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .story-grid {
     grid-template-columns: 1fr;

@@ -3,7 +3,8 @@
   <div class="footer-container">
     <div class="footer-content">
       <div class="footer-section">
-        <img src="/logos/logo.png" alt="Mowadi Overseas Logo" class="footer-logo">
+        <a routerLink="/" class="footer-logo-link"><img src="/logos/footer_logo.svg" alt="Mowadi Overseas Ltd company logo linking to homepage" class="footer-logo"></a>
+
         <p class="footer-description">
           Connecting trusted talent with global opportunities across the Middle East.
         </p>
@@ -89,8 +90,12 @@
     </div>
 
     <div class="footer-bottom">
-      <p class="copyright">
-        © {{ currentYear }} Mowadi Overseas Ltd. All rights reserved.
+       <p class="copyright">
+        <svg class="copyright-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M15 9.354a4 4 0 1 0 0 5.292"></path>
+        </svg>
+        {{ currentYear }} Mowadi Overseas Ltd. All rights reserved.
       </p>
     </div>
   </div>

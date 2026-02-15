@@ -10,6 +10,7 @@
   font-family: inherit;
   text-decoration: none;
   gap: var(--spacing-sm);
+
 }
 
 .btn a {

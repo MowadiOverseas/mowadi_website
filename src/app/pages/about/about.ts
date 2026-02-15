@@ -39,18 +39,23 @@ export class About {
   coreValues: Value[] = [
     {
       icon: 'shield',
-      title: 'Integrity',
-      description: 'We uphold the highest ethical standards in all our dealings, ensuring transparency and honesty with both workers and employers.'
+      title: 'Excellence',
+      description: 'We priotize quality and deliver outstanding recruitment services.'
     },
     {
       icon: 'users',
-      title: 'Professionalism',
-      description: 'Our team delivers expert service with attention to detail, maintaining industry-leading standards in recruitment and deployment.'
+      title: 'Innovation',
+      description: 'We embrace new trends and technologies to provide forward-thinking staffing solutions.'
     },
     {
       icon: 'heart',
-      title: 'Reliability',
-      description: 'We build lasting relationships through consistent delivery, support, and commitment to the success of all our stakeholders.'
+      title: 'Collaboration',
+      description: 'Success lies in building strong partnerships between clients, candidates, and partners like Promex.'
+    },
+    {
+      icon: 'users',
+      title: 'Integrity',
+      description: 'Transparency, trust, and ethical practices guide all our operations.'
     }
   ];
 
